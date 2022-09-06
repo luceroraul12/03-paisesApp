@@ -19,6 +19,7 @@ export class PaisInputComponent implements OnInit {
   buscar(): void{
     console.log(this.termino);
     this.onEnter.emit(this.termino);
+    this.termino = "";
   }
 
 }

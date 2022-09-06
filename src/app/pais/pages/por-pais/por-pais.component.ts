@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, EventEmitter } from '@angular/core';
 import { PaisService } from '../../../services/pais.service';
 import { Pais } from '../../interface/pais.interface';
 
@@ -18,8 +18,9 @@ export class PorPaisComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  buscar(): void{
+  buscar(termino: string): void{
     this.hayError = false;
+    this.termino = termino;
     if(this.termino == ""){
       return
     }

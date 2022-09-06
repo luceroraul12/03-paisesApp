@@ -7,9 +7,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PorPaisComponent implements OnInit {
 
+  termino: string = "hola";
+
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  buscar(): void{
+    console.log(this.termino);
+    this.termino = "";
+    
   }
 
 }

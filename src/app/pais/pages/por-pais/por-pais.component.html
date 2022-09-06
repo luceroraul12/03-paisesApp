@@ -9,11 +9,11 @@
 </div>
 <hr>
 
-<div class="alert alert-danger">
+<div class="alert alert-danger" *ngIf="hayError">
     No existen resultados
 </div>
 
-<div class="row">
+<div class="row" *ngIf="!hayError">
     <div class="col">
         <table class="table table-hover">
             <thead>

@@ -1,4 +1,4 @@
-import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { debounceTime, Subject } from 'rxjs';
 
 @Component({
@@ -7,6 +7,7 @@ import { debounceTime, Subject } from 'rxjs';
   styleUrls: ['./pais-input.component.css'],
 })
 export class PaisInputComponent implements OnInit {
+  @Input() placeholder: string = 'Buscar por pais ...';
   @Output() onEnter: EventEmitter<string> = new EventEmitter();
   @Output() onDebounce: EventEmitter<string> = new EventEmitter();
 

@@ -1,1 +1,13 @@
 <p>ver-pais works!</p>
+
+<div *ngIf="!pais; else divPais" class="alert alert-info">Cargando ...</div>
+
+<ng-template #divPais>
+  <div class="row">
+    <div class="col-2">
+      <h1>
+        Pais: <small>{{ pais.name }}</small>
+      </h1>
+    </div>
+  </div>
+</ng-template>

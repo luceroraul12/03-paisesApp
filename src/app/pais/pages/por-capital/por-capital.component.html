@@ -1,1 +1,19 @@
-<p>por-capital works!</p>
+<h2>Por Capital</h2>
+<hr />
+<div class="row">
+  <div class="col">
+    <app-pais-input
+      (onEnter)="buscar($event)"
+      (onDebounce)="obtenerSugerencia($event)"
+    ></app-pais-input>
+  </div>
+</div>
+<hr />
+
+<div class="alert alert-danger" *ngIf="hayError">No existen resultados</div>
+
+<div class="row" *ngIf="!hayError">
+  <div class="col">
+    <app-pais-tabla [paisesEncontrados]="paisesEncontrados"></app-pais-tabla>
+  </div>
+</div>

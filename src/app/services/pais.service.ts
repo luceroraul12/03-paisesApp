@@ -21,4 +21,9 @@ export class PaisService {
     const url: string = `${this.urlApi}/capital/${busqueda}`;
     return this.http.get<Pais[]>(url);
   }
+
+  buscarPorCodigoAlpha(id: string): Observable<Pais> {
+    const url: string = `${this.urlApi}/alpha/${id}`;
+    return this.http.get<Pais>(url);
+  }
 }

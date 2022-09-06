@@ -26,11 +26,15 @@
                 </tr>
             </thead>
             <tbody>
-                <td>1</td>
-                <td>bandera</td>
-                <td>nombre</td>
-                <td>población</td>
-                <td>VERMAS</td>
+                <tr *ngFor="let pais of paisesEncontrados; let i = index">
+                    <td>{{i}}</td>
+                    <td>
+                        <img [src]="pais.flag" class="small-flag">
+                    </td>
+                    <td>{{pais.name}}</td>
+                    <td>{{pais.population}}</td>
+                    <td>VERMAS</td>
+                </tr>
             </tbody>
         </table>
     </div>

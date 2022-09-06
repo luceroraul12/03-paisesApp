@@ -15,6 +15,9 @@ export class PorPaisComponent implements OnInit {
   }
 
   buscar(): void{
+    if(this.termino == ""){
+      return
+    }
     console.log(this.termino);
     this.termino = "";
     

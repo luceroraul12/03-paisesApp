@@ -1,11 +1,8 @@
 <h2>Por Pais</h2>
 <hr />
 <div class="row">
-  <div class="col">
-    <app-pais-input
-      (onEnter)="buscar($event)"
-      (onDebounce)="obtenerSugerencia($event)"
-    ></app-pais-input>
+  <div class="col animate__animated animate__zoomIn">
+    <app-pais-input (onEnter)="buscar($event)" (onDebounce)="obtenerSugerencia($event)"></app-pais-input>
   </div>
 </div>
 <hr />

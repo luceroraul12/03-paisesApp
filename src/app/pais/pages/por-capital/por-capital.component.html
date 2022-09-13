@@ -2,11 +2,8 @@
 <hr />
 <div class="row">
   <div class="col">
-    <app-pais-input
-      placeholder="Buscar por capital ..."
-      (onEnter)="buscar($event)"
-      (onDebounce)="obtenerSugerencia($event)"
-    ></app-pais-input>
+    <app-pais-input placeholder="Buscar por capital ..." (onEnter)="buscar($event)"
+      (onDebounce)="obtenerSugerencia($event)" class="animate__animated animate__zoomIn"></app-pais-input>
   </div>
 </div>
 <hr />
